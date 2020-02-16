@@ -1,0 +1,32 @@
+:root {
+    /* Color */
+    --black: #191919;
+    --white: #fff;
+    --gray: #787878;
+    --gray_bg: #f5f5f5;
+    --green: #007d2f;
+    --brown: #3d342d;
+    /* Fonts */
+    --f100: 'Montserrat-Thin';
+    --f500: 'Montserrat-Medium';
+    --n400: 'Nunito-Regular';
+}
+
+@font-face {
+    font-family: 'Montserrat-Thin';
+    src: url(../fonts/Montserrat/Montserrat-Thin.ttf);
+}
+
+@font-face {
+    font-family: 'Montserrat-Medium';
+    src: url(../fonts/Montserrat/Montserrat-Medium.ttf);
+}
+
+@font-face {
+    font-family: 'Nunito-Regular';
+    src: url(../fonts/NunitoSans/Nunito-Regular.ttf);
+}
+@font-face{
+    font-family: 'Pe-icon-7-stroke';
+    src: url(../fonts/pe-icon-7-stroke/Pe-icon-7-stroke.ttf);
+}

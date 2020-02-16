@@ -1,0 +1,299 @@
+* {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+
+    color: var(--black);
+    font-family: var(--f500);
+    font-size: 12px;
+
+    user-select: none;
+
+    scroll-behavior: smooth;
+}
+
+*:focus {
+    outline: none;
+}
+
+/* Underline From Left */
+.hvr-underline-from-left {
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    position: relative;
+    overflow: hidden;
+}
+
+.hvr-underline-from-left:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    left: 0;
+    right: 100%;
+    bottom: 0;
+    background: var(--green);
+    height: 4px;
+    -webkit-transition-property: right;
+    transition-property: right;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-timing-function: ease-out;
+    transition-timing-function: ease-out;
+}
+
+.hvr-underline-from-left:hover:before,
+.hvr-underline-from-left:focus:before,
+.hvr-underline-from-left:active:before {
+    right: 0;
+}
+
+/* Grow */
+.hvr-grow {
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    -webkit-transition-duration: 0.5s;
+    transition-duration: 0.5s;
+    -webkit-transition-property: transform;
+    transition-property: transform;
+}
+
+.hvr-grow:hover,
+.hvr-grow:focus,
+.hvr-grow:active {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+}
+
+header {
+    background: url(../image/header__bg.jpg);
+    background-size: cover;
+    background-position: center center;
+    height: 100vh;
+    padding: 15px 0;
+}
+
+.header__nav-link {
+    display: block;
+
+    margin-left: 30px;
+    padding: 10px 0;
+    text-transform: uppercase;
+    transition: 500ms;
+}
+
+.header__nav-link:hover {
+    color: var(--green);
+    font-weight: 900;
+    transform: scale(1.05);
+}
+
+.header__content {
+    height: 70vh;
+    width: 100%;
+}
+
+.header__content-title {
+    font-size: 36px;
+}
+
+.header__content-sub-title {
+    margin: 35px 0;
+    font-size: 16px;
+    width: 440px;
+    line-height: 22px;
+    font-family: var(--f100);
+    color: var(--gray);
+}
+
+.header__content-btn {
+    background-color: var(--green);
+    color: var(--white);
+    padding: 20px 45px;
+    border: none;
+    border-radius: 5px;
+    text-transform: uppercase;
+}
+
+.header__content-btn:hover {
+    box-shadow: 0 0 20px 0 var(--gray);
+}
+
+#about {
+    padding: 100px 0;
+    text-align: center;
+}
+
+#about::after {
+    content: url(../image/about__painting-author.png);
+}
+
+.main-title {
+    font-size: 36px;
+    margin-bottom: 30px;
+}
+
+.main-text {
+    font-size: 18px;
+    color: var(--gray);
+    font-family: var(--n400);
+    line-height: 25px;
+    width: 540px;
+    margin-bottom: 50px;
+}
+
+#skills__block {
+    position: relative;
+
+    background-color: var(--gray_bg);
+    padding: 150px 0;
+}
+
+.skills {
+    width: 45%;
+}
+
+.skills__block-img {
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
+    width: 50%;
+    object-fit: cover;
+}
+
+.progressbar {
+    height: 3px;
+    position: relative;
+    background: #d8d8d8;
+}
+
+.progressbar>span {
+    display: block;
+    height: 100%;
+    background-color: var(--green);
+    position: relative;
+    overflow: hidden;
+}
+
+.skills__sub-title {
+    font-size: 16px;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+#testimonials {
+    padding: 70px;
+    text-align: center;
+    background-color: var(--green);
+}
+
+.icon i {
+    color: white;
+    font-size: 50px;
+}
+
+.testimonials__card {
+    width: 25%;
+}
+
+.testimonials__card h4 {
+    font-size: 18px;
+    color: var(--white);
+    margin: 10px 0;
+}
+
+.testimonials__card p {
+    color: var(--white);
+    font-size: 12px;
+    text-transform: uppercase;
+}
+
+.work__card {
+    width: 25%;
+    position: relative;
+}
+
+.work-card-hover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    transition: 200ms;
+}
+
+.work-card-hover:hover {
+    box-shadow: 0 0 7200px 50px #3d342d inset;
+    opacity: 1;
+}
+
+.work__load-more {
+    padding: 50px;
+    background-color: var(--green);
+    text-align: center;
+    width: 100%;
+}
+
+.work__load-more button {
+    border: none;
+    background: none;
+
+    font-size: 22px;
+    color: var(--white);
+    text-transform: uppercase;
+}
+
+.work__load-more button:hover {
+    text-decoration: underline;
+}
+
+#work-process {
+    padding-top: 100px;
+    text-align: center;
+}
+
+.work-process__video {
+    padding-bottom: 100px;
+}
+
+.work-process__block {
+    padding: 100px 0;
+    background: var(--gray_bg);
+    width: 100%;
+}
+
+.work-process__card {
+    width: 25%;
+}
+
+.work-process__card .icon i {
+    color: #656565;
+}
+
+.work-process__card h4 {
+    font-size: 18px;
+    margin: 15px 0;
+    text-transform: uppercase;
+}
+
+.work-process__card p {
+    line-height: 25px;
+    font-size: 16px;
+    font-family: var(--n400);
+    margin-bottom: 50px;
+}
