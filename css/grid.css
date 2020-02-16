@@ -44,10 +44,19 @@
 .align-items-end{
     align-items: flex-end;
 }
+.text-center{
+    text-align: center;
+}
 .flex-img{
     width: 100%;
     height: 100%;
     object-fit: cover;
     margin-bottom: -4px;
+}
+
+@media all and (max-width:768px) {
+    .justify-content-md-around{
+        justify-content: space-around;
+    }
 }
 

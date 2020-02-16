@@ -59,8 +59,8 @@
     -webkit-transform: perspective(1px) translateZ(0);
     transform: perspective(1px) translateZ(0);
     box-shadow: 0 0 1px rgba(0, 0, 0, 0);
-    -webkit-transition-duration: 0.5s;
-    transition-duration: 0.5s;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
     -webkit-transition-property: transform;
     transition-property: transform;
 }
@@ -77,6 +77,7 @@ header {
     background-size: cover;
     background-position: center center;
     height: 100vh;
+    min-height: 600px;
     padding: 15px 0;
 }
 
@@ -97,6 +98,7 @@ header {
 
 .header__content {
     height: 70vh;
+    min-height: 540px;
     width: 100%;
 }
 
@@ -122,7 +124,8 @@ header {
     text-transform: uppercase;
 }
 
-.header__content-btn:hover {
+.header__content-btn:hover,
+.user-feedback__form-btn:hover {
     box-shadow: 0 0 20px 0 var(--gray);
 }
 
@@ -154,6 +157,7 @@ header {
 
     background-color: var(--gray_bg);
     padding: 150px 0;
+    overflow: hidden;
 }
 
 .skills {
@@ -166,6 +170,12 @@ header {
     top: 0;
     height: 100%;
     width: 50%;
+
+}
+
+.skills__block-img img {
+    height: 100%;
+    width: 100%;
     object-fit: cover;
 }
 
@@ -235,6 +245,7 @@ header {
     align-items: center;
 
     transition: 200ms;
+    cursor: pointer;
 }
 
 .work-card-hover:hover {
@@ -296,4 +307,209 @@ header {
     font-size: 16px;
     font-family: var(--n400);
     margin-bottom: 50px;
+}
+
+#user-feedback {
+    padding-top: 35px;
+    padding-bottom: 100px;
+    background-color: var(--gray_bg);
+}
+
+.user-feedback__form {
+    width: 63%;
+    margin: 0 auto;
+}
+
+.user-feedback__form input,
+.user-feedback__form textarea {
+    display: block;
+    height: 45px;
+    padding: 15px;
+    font-size: 16px;
+    font-family: var(--n400);
+    border: none;
+}
+
+.user-feedback__form textarea {
+    resize: none;
+    width: 100%;
+    height: 150px;
+}
+
+.user-feedback__form input:nth-child(1) {
+    width: 48.5%;
+    margin-right: 3%;
+}
+
+.user-feedback__form input:nth-child(2) {
+    width: 48.5%;
+}
+
+.user-feedback__form input:nth-child(3) {
+    width: 100%;
+    margin: 30px 0;
+}
+
+.user-feedback__form-btn {
+    text-transform: uppercase;
+    padding: 25px;
+    background-color: var(--green);
+    color: var(--white);
+    margin-top: 30px;
+    border: none;
+    border-radius: 5px;
+}
+
+footer {
+    padding: 100px 0;
+    background-color: var(--black);
+}
+
+.footer__info,
+.footer__contact,
+.footer__nav {
+    width: 33, 33333333333333%;
+}
+
+.footer__nav ul {
+    margin-right: 30px;
+}
+
+.footer__nav ul:last-child {
+    margin-right: 0;
+}
+
+footer h5 {
+    color: var(--white);
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+footer p,
+footer a {
+    display: block;
+    font-size: 15px;
+    color: var(--gray);
+    margin-bottom: 10px;
+    transition: 300ms;
+    font-family: var(--n400);
+}
+
+footer a:hover {
+    color: var(--white);
+}
+
+
+
+
+
+
+
+
+
+@media all and (max-width:992px) {
+    .work__card {
+        width: 33%;
+    }
+
+    .user-feedback__form {
+        width: 75%;
+    }
+
+    #about,
+    #skills__block,
+    #testimonials,
+    #work-process,
+    .work-process__block,
+    footer {
+        padding: 50px 0;
+    }
+
+    .work__load-more {
+        padding: 30px;
+    }
+
+    #user-feedback,
+    .work-process__video {
+        padding-bottom: 50px;
+    }
+
+    .work-process__card {
+        width: 30%;
+    }
+
+    .skills__block-img {
+        display: none;
+    }
+
+    .skills {
+        width: 60%;
+        margin: 0 auto;
+        text-align: center;
+    }
+}
+
+@media all and (max-width:768px) {
+    .work__card {
+        width: 50%;
+    }
+
+    .main-text {
+        width: 90%;
+    }
+
+    .work-process__card {
+        width: 40%;
+    }
+
+    .footer__info,
+    .footer__contact,
+    .footer__nav {
+        width: max-content;
+    }
+
+    .footer__contact {
+        margin: 0 30px;
+    }
+}
+
+@media all and (max-width:576px) {
+    .header__content-sub-title {
+        width: 61%;
+    }
+
+    .skills {
+        width: 75%;
+    }
+
+    .work__load-more button {
+        font-size: 16px;
+    }
+
+    #testimonials {
+        padding: 15px 0;
+    }
+
+    .work-process__card {
+        width: 51%;
+    }
+
+    .user-feedback__form {
+        width: 90%;
+    }
+
+    .footer__contact,
+    .footer__nav {
+        margin-top: 30px;
+    }
+}
+
+@media all and (max-width:320px) {
+    .testimonials__card {
+        margin: 15px 30px;
+    }
+
+    .work-process__card p {
+        margin-bottom: 20px;
+    }
 }
