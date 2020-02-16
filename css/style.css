@@ -52,6 +52,7 @@
     right: 0;
 }
 
+
 /* Grow */
 .hvr-grow {
     display: inline-block;
@@ -95,6 +96,40 @@ header {
     font-weight: 900;
     transform: scale(1.05);
 }
+
+/* DROPDOWN START */
+.mainmenubtn {
+    color: var(--black);
+    background-color: var(--gray_bg);
+    border: none;
+    cursor: pointer;
+    padding: 15px;
+}
+
+.dropdown {
+    position: relative;
+    display: none;
+}
+
+.dropdown-child {
+    display: none;
+    background-color: var(--gray_bg);
+    min-width: 150px;
+    text-align: center;
+}
+
+.dropdown-child a {
+    color: var(--green);
+    width: 65%;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-child li {
+    padding: 10px 0;
+}
+
+/* DROPDOWN END */
 
 .header__content {
     height: 70vh;
@@ -419,10 +454,13 @@ footer a:hover {
     #about,
     #skills__block,
     #testimonials,
-    #work-process,
     .work-process__block,
     footer {
         padding: 50px 0;
+    }
+
+    #work-process {
+        padding-top: 50px;
     }
 
     .work__load-more {
@@ -450,6 +488,14 @@ footer a:hover {
 }
 
 @media all and (max-width:768px) {
+    .dropdown {
+        display: inline-block;
+    }
+
+    .header__nav {
+        display: none;
+    }
+
     .work__card {
         width: 50%;
     }
@@ -502,13 +548,13 @@ footer a:hover {
     .footer__nav {
         margin-top: 30px;
     }
-}
 
-@media all and (max-width:320px) {
     .testimonials__card {
         margin: 15px 30px;
     }
+}
 
+@media all and (max-width:320px) {
     .work-process__card p {
         margin-bottom: 20px;
     }

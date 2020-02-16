@@ -58,5 +58,8 @@
     .justify-content-md-around{
         justify-content: space-around;
     }
+    .align-items-md-start{
+        align-items: flex-start;
+    }
 }
 
