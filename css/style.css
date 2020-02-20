@@ -1,3 +1,42 @@
+/* ROOT START */
+
+:root {
+    /* Color */
+    --black: #191919;
+    --white: #fff;
+    --gray: #787878;
+    --gray_bg: #f5f5f5;
+    --green: #007d2f;
+    --brown: #3d342d;
+    /* Fonts */
+    --f100: 'Montserrat-Thin';
+    --f500: 'Montserrat-Medium';
+    --n400: 'Nunito-Regular';
+}
+
+@font-face {
+    font-family: 'Montserrat-Thin';
+    src: url(../fonts/Montserrat/Montserrat-Thin.ttf);
+}
+
+@font-face {
+    font-family: 'Montserrat-Medium';
+    src: url(../fonts/Montserrat/Montserrat-Medium.ttf);
+}
+
+@font-face {
+    font-family: 'Nunito-Regular';
+    src: url(../fonts/NunitoSans/Nunito-Regular.ttf);
+}
+
+@font-face {
+    font-family: 'Pe-icon-7-stroke';
+    src: url(../fonts/pe-icon-7-stroke/Pe-icon-7-stroke.ttf);
+}
+
+/* ROOT END */
+
+/* GRID START */
 * {
     padding: 0;
     margin: 0;
@@ -18,13 +57,91 @@
     outline: none;
 }
 
-/* Underline From Left */
+.container {
+    max-width: 1140px;
+    padding: 0 15px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.display-flex {
+    display: flex;
+}
+
+.display-block {
+    display: block;
+}
+
+.flex-column {
+    flex-direction: column;
+}
+
+.flex-grow {
+    flex-grow: 1;
+}
+
+.justify-content-center {
+    justify-content: center;
+}
+
+.justify-content-between {
+    justify-content: space-between;
+}
+
+.justify-content-around {
+    justify-content: space-around;
+}
+
+.justify-content-star {
+    justify-content: start;
+}
+
+.justify-content-end {
+    justify-content: end;
+}
+
+.align-items-center {
+    align-items: center;
+}
+
+.align-items-start {
+    align-items: flex-start;
+}
+
+.align-items-end {
+    align-items: flex-end;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.flex-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    margin-bottom: -4px;
+}
+
+@media all and (max-width:768px) {
+    .justify-content-md-around {
+        justify-content: space-around;
+    }
+
+    .align-items-md-start {
+        align-items: flex-start;
+    }
+}
+
+/* GRID END */
+
 .hvr-underline-from-left {
     display: inline-block;
-    vertical-align: middle;
-    -webkit-transform: perspective(1px) translateZ(0);
-    transform: perspective(1px) translateZ(0);
-    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
     position: relative;
     overflow: hidden;
 }
@@ -38,12 +155,7 @@
     bottom: 0;
     background: var(--green);
     height: 4px;
-    -webkit-transition-property: right;
-    transition-property: right;
-    -webkit-transition-duration: 0.3s;
-    transition-duration: 0.3s;
-    -webkit-transition-timing-function: ease-out;
-    transition-timing-function: ease-out;
+    transition: 0.5s all;
 }
 
 .hvr-underline-from-left:hover:before,
@@ -52,33 +164,15 @@
     right: 0;
 }
 
-
-/* Grow */
-.hvr-grow {
-    display: inline-block;
-    vertical-align: middle;
-    -webkit-transform: perspective(1px) translateZ(0);
-    transform: perspective(1px) translateZ(0);
-    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
-    -webkit-transition-duration: 0.3s;
-    transition-duration: 0.3s;
-    -webkit-transition-property: transform;
-    transition-property: transform;
-}
-
-.hvr-grow:hover,
-.hvr-grow:focus,
-.hvr-grow:active {
-    -webkit-transform: scale(1.1);
-    transform: scale(1.1);
-}
-
-header {
+.header__bg-img {
     background: url(../image/header__bg.jpg);
     background-size: cover;
     background-position: center center;
     height: 100vh;
     min-height: 600px;
+}
+
+header {
     padding: 15px 0;
 }
 
@@ -98,7 +192,7 @@ header {
 }
 
 /* DROPDOWN START */
-.mainmenubtn {
+.header__dropdown-btn {
     color: var(--black);
     background-color: var(--gray_bg);
     border: none;
@@ -106,7 +200,7 @@ header {
     padding: 15px;
 }
 
-.dropdown {
+.header__dropdown {
     position: relative;
     display: none;
 }
@@ -159,10 +253,17 @@ header {
     text-transform: uppercase;
 }
 
+.header__content-btn,
+.user-feedback__form-btn {
+    transition: 0.5s;
+}
+
 .header__content-btn:hover,
 .user-feedback__form-btn:hover {
     box-shadow: 0 0 20px 0 var(--gray);
+    background-color: rgb(134, 219, 6);
 }
+
 
 #about {
     padding: 100px 0;
@@ -284,7 +385,7 @@ header {
 }
 
 .work-card-hover:hover {
-    box-shadow: 0 0 7200px 50px #3d342d inset;
+    box-shadow: 0 0 7200px 0 #3d342d inset;
     opacity: 1;
 }
 
@@ -488,7 +589,7 @@ footer a:hover {
 }
 
 @media all and (max-width:768px) {
-    .dropdown {
+    .header__dropdown {
         display: inline-block;
     }
 
