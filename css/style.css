@@ -34,22 +34,22 @@
     src: url(../fonts/pe-icon-7-stroke/Pe-icon-7-stroke.ttf);
 }
 
+
 /* ROOT END */
 
+
 /* GRID START */
+
 * {
     padding: 0;
     margin: 0;
     list-style: none;
     text-decoration: none;
     box-sizing: border-box;
-
     color: var(--black);
     font-family: var(--f500);
     font-size: 12px;
-
     user-select: none;
-
     scroll-behavior: smooth;
 }
 
@@ -132,11 +132,11 @@
     .justify-content-md-around {
         justify-content: space-around;
     }
-
     .align-items-md-start {
         align-items: flex-start;
     }
 }
+
 
 /* GRID END */
 
@@ -178,7 +178,6 @@ header {
 
 .header__nav-link {
     display: block;
-
     margin-left: 30px;
     padding: 10px 0;
     text-transform: uppercase;
@@ -187,11 +186,12 @@ header {
 
 .header__nav-link:hover {
     color: var(--green);
-    font-weight: 900;
     transform: scale(1.05);
 }
 
+
 /* DROPDOWN START */
+
 .header__dropdown-btn {
     color: var(--black);
     background-color: var(--gray_bg);
@@ -222,6 +222,7 @@ header {
 .dropdown-child li {
     padding: 10px 0;
 }
+
 
 /* DROPDOWN END */
 
@@ -255,7 +256,7 @@ header {
 
 .header__content-btn,
 .user-feedback__form-btn {
-    transition: 0.5s;
+    transition: 0.5s all;
 }
 
 .header__content-btn:hover,
@@ -264,6 +265,27 @@ header {
     background-color: rgb(134, 219, 6);
 }
 
+.home__section {
+    background: var(--green);
+    padding: 100px 0;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.home__section-title {
+    line-height: 52px;
+    font-size: 30px;
+}
+
+.home__section-text {
+    line-height: 25px;
+    color: var(--white);
+    font-size: 18px;
+    width: 540px;
+}
 
 #about {
     padding: 100px 0;
@@ -290,7 +312,6 @@ header {
 
 #skills__block {
     position: relative;
-
     background-color: var(--gray_bg);
     padding: 150px 0;
     overflow: hidden;
@@ -306,7 +327,6 @@ header {
     top: 0;
     height: 100%;
     width: 50%;
-
 }
 
 .skills__block-img img {
@@ -368,24 +388,28 @@ header {
     position: relative;
 }
 
-.work-card-hover {
+.work-card-hover,
+.home__work-card-hover {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
     opacity: 0;
-
     display: flex;
     justify-content: center;
     align-items: center;
-
     transition: 200ms;
     cursor: pointer;
 }
 
+.home__work-card-hover:hover {
+    box-shadow: 0 0 7200px 0 rgba(76, 148, 106, 0.85) inset;
+    opacity: 1;
+}
+
 .work-card-hover:hover {
-    box-shadow: 0 0 7200px 0 #3d342d inset;
+    box-shadow: 0 0 7200px 0 rgba(61, 52, 45, 0.85) inset;
     opacity: 1;
 }
 
@@ -399,7 +423,6 @@ header {
 .work__load-more button {
     border: none;
     background: none;
-
     font-size: 22px;
     color: var(--white);
     text-transform: uppercase;
@@ -535,23 +558,13 @@ footer a:hover {
     color: var(--white);
 }
 
-
-
-
-
-
-
-
-
 @media all and (max-width:992px) {
     .work__card {
         width: 33%;
     }
-
     .user-feedback__form {
         width: 75%;
     }
-
     #about,
     #skills__block,
     #testimonials,
@@ -559,28 +572,22 @@ footer a:hover {
     footer {
         padding: 50px 0;
     }
-
     #work-process {
         padding-top: 50px;
     }
-
     .work__load-more {
         padding: 30px;
     }
-
     #user-feedback,
     .work-process__video {
         padding-bottom: 50px;
     }
-
     .work-process__card {
         width: 30%;
     }
-
     .skills__block-img {
         display: none;
     }
-
     .skills {
         width: 60%;
         margin: 0 auto;
@@ -592,64 +599,52 @@ footer a:hover {
     .header__dropdown {
         display: inline-block;
     }
-
     .header__nav {
         display: none;
     }
-
     .work__card {
         width: 50%;
     }
-
     .main-text {
         width: 90%;
     }
-
     .work-process__card {
         width: 40%;
     }
-
     .footer__info,
     .footer__contact,
     .footer__nav {
         width: max-content;
     }
-
     .footer__contact {
         margin: 0 30px;
     }
 }
 
 @media all and (max-width:576px) {
-    .header__content-sub-title {
+    .header__content-sub-title,
+    .home__section-text {
         width: 61%;
     }
-
     .skills {
         width: 75%;
     }
-
     .work__load-more button {
         font-size: 16px;
     }
-
     #testimonials {
         padding: 15px 0;
     }
-
     .work-process__card {
         width: 51%;
     }
-
     .user-feedback__form {
         width: 90%;
     }
-
     .footer__contact,
     .footer__nav {
         margin-top: 30px;
     }
-
     .testimonials__card {
         margin: 15px 30px;
     }
