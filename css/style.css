@@ -414,9 +414,13 @@ header {
     font-size: 16px;
 }
 
-.about__author-text_mb {
+.about__author-text:nth-child(2) {
     margin-bottom: 35px;
 }
+/* 
+.about__author-text_mb {
+    margin-bottom: 35px;
+} */
 
 .about__author::after {
     content: url(../image/about__signature.png);
@@ -719,24 +723,30 @@ footer a:hover {
     .footer__contact {
         margin: 0 30px;
     }
-    #about__author-block{
+
+    #about__author-block {
         padding: 50px 0;
     }
+
     #about__author-block .row {
         display: flex;
         flex-direction: column-reverse;
         align-items: center;
     }
-    .about__author{
+
+    .about__author {
         width: 60%;
     }
+
     .about__author-img {
         position: static;
         display: block;
-        width: 60%;
+        width: 100%;
+        height: 100%;
 
     }
-    .about__author{
+
+    .about__author {
         margin-left: 0;
         text-align: center;
     }

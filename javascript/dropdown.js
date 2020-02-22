@@ -10,10 +10,10 @@ class Dropdown {
     click() {
         this.dropdownChild.style.display == 'block' ? this.dropdownChild.style.display = 'none' : this.dropdownChild.style.display = 'block';
 
-        this.check()
-
         this.dropdownBtn.innerHTML = `${'&#9776;'}`
         this.dropdownBtn.style.color = `black`
+
+        this.check()
     }
     check() {
         if (this.dropdownChild.style.display == 'block') {
