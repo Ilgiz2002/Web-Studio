@@ -359,9 +359,11 @@ header {
     font-size: 16px;
     font-family: var(--n400);
 }
-.contact-page__map{
+
+.contact-page__map {
     padding: 100px 0 0 0;
 }
+
 #skills__block,
 #about__author-block {
     position: relative;
@@ -698,7 +700,8 @@ footer a:hover {
         width: 33%;
     }
 
-    .user-feedback__form {
+    .user-feedback__form,
+    .main__contact-info {
         width: 75%;
     }
 
@@ -706,12 +709,18 @@ footer a:hover {
     #skills__block,
     #testimonials,
     .work-process__block,
+    .main__contact-section,
     footer {
         padding: 50px 0;
     }
 
-    #work-process {
+    #work-process,
+    .contact-page__map {
         padding-top: 50px;
+    }
+
+    #contact__page .user-feedback__form {
+        padding-top: 20px;
     }
 
     .work__load-more {
@@ -734,6 +743,18 @@ footer a:hover {
     .skills {
         width: 60%;
         margin: 0 auto;
+        text-align: center;
+    }
+
+    .main__contact-section-lg {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .justify-content-lg-center {
+        justify-content: center;
+    }
+    .text-lg-center{
         text-align: center;
     }
 }
@@ -823,6 +844,7 @@ footer a:hover {
         width: 51%;
     }
 
+    #contact__page .user-feedback__form,
     .user-feedback__form {
         width: 90%;
     }
@@ -840,5 +862,8 @@ footer a:hover {
 @media all and (max-width:320px) {
     .work-process__card p {
         margin-bottom: 20px;
+    }
+    .main__contact-info{
+        width: 100%;
     }
 }
