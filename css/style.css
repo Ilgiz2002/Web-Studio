@@ -243,7 +243,7 @@ label {
 .main-menu {
     max-height: 0;
     display: flex;
-    z-index:9999999999;
+    z-index: 9999999999;
     position: absolute;
     justify-content: center;
     align-items: center;
@@ -587,31 +587,49 @@ label {
 .work__card {
     width: 25%;
     position: relative;
+
+    overflow: hidden;
 }
+
 
 .work-card-hover,
 .home__work-card-hover {
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
+    width: 20%;
+    height: 20%;
     opacity: 0;
     display: flex;
     justify-content: center;
     align-items: center;
     transition: 200ms;
     cursor: pointer;
+
+    transform: scale(0.9);
 }
 
-.home__work-card-hover:hover {
+.work__card:hover .home__work-card-hover {
     box-shadow: 0 0 7200px 0 rgba(76, 148, 106, 0.85) inset;
     opacity: 1;
+    width: 100%;
+    height: 100%;
+
+    transform: scale(1);
 }
 
-.work-card-hover:hover {
+.work__card:hover .work-card-hover {
     box-shadow: 0 0 7200px 0 rgba(61, 52, 45, 0.85) inset;
     opacity: 1;
+    width: 100%;
+    height: 100%;
+
+    transform: scale(1);
+}
+
+.work__card:hover img {
+    transform: scale(1.05);
+    transition: 500ms;
 }
 
 .work__load-more {
