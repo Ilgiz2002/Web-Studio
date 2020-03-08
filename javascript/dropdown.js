@@ -9,9 +9,16 @@ class Dropdown {
     }
     click() {
         this.dropdownChild.style.display == 'block' ? this.dropdownChild.style.display = 'none' : this.dropdownChild.style.display = 'block';
+        if(this.dropdownChild.style.display == 'none'){
+            this.dropdownChild.style = `
+            height:0;
+            
+            `
+        }
 
         this.dropdownBtn.innerHTML = `${'&#9776;'}`
-        this.dropdownBtn.style.color = `black`
+        this.dropdownBtn.style = `
+        color:black;`
 
         this.check()
     }
@@ -20,14 +27,14 @@ class Dropdown {
             this.dropdownChild.style = `
             display:block;
             position: absolute;
-            width: 150px;
             height:max-content;
             padding:10px;
             top: ${this.dropdownBtn.clientHeight + 5}px;
             right: 0;
+            z-index:999999999999999999;
             `
             this.dropdownBtn.innerHTML = `${'&#10006'}`;
-            this.dropdownBtn.style.color = 'red'
+            this.dropdownBtn.style = `color:red;`
         }
     }
 }
