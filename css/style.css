@@ -243,6 +243,7 @@ label {
 .main-menu {
     max-height: 0;
     display: flex;
+    z-index:9999999999;
     position: absolute;
     justify-content: center;
     align-items: center;
