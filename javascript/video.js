@@ -3,5 +3,5 @@ console.log(video);
 
 
 video.addEventListener('click', function () {
-    console.log('hello');
+    video.getAttribute('controls') == 'controls' ? video.setAttribute('controls', '') : video.setAttribute('controls', 'controls')
 })
